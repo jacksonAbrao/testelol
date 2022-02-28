@@ -1,0 +1,220 @@
+
+/*----------------- general ----------------*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    position: relative;
+}
+
+.msg {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    width: 100%;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 10px;
+}
+
+
+
+/*----------------- navbar ----------------*/
+.navbar,
+.navbar-brand,
+.navbar li {
+  transition: 0.5s;
+}
+
+.navbar2 {
+  box-shadow: 0px -5px 11px 1px #4c4040;
+}
+
+.navbar{
+    background-color: #353e48;
+    padding: 5px;
+}
+
+.navbar a{
+    color: #fff !important;
+}
+
+.navbar a:hover {
+  color: #f2a340 !important;
+}
+/*----------------- menuhambu -------------*/
+.hamburguer {
+  position: relative;
+  display: inline-block;
+  background: #FFF;
+  width: 30px;
+  height: 2px;
+  transition: 0.5s ease-in-out;
+  box-sizing: content-box;
+  cursor: pointer;
+}
+.menuEsp {
+  cursor: pointer;
+  box-sizing: content-box;
+}
+.navbar-toogle {
+  box-sizing: border-box;
+}
+.hamburguer:before,
+.hamburguer:after {
+  background: #FFF;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: 0.5s ease-in-out;
+}
+.hamburguer:before {
+  top: -10px;
+}
+.hamburguer:after {
+  bottom: -10px;
+}
+input {
+  display: none;
+}
+input:checked ~ label .hamburguer {
+  transform: rotate(45deg);
+}
+input:checked ~ label .hamburguer:before {
+  transform: rotate(90deg);
+  top: 0;
+}
+input:checked ~ label .hamburguer:after {
+  transform: rotate(90deg);
+  bottom: 0;
+}
+@media (min-width: 992px) {
+  .navbar-toogle {
+    display: none;
+  }
+}
+
+.navbar2{
+    background-color: #353e48;
+    padding: 5px;
+}
+
+.mt-100 {
+  margin-top: 100px;
+}
+/*----------------- menuhambu -------------*/
+/*----------------- navbar ----------------*/
+
+
+/*----------------- home ------------------*/
+
+#body{
+    width: 100%;
+    height: 100vh;
+    background-image: url('../img/call-center.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#body .filter{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.filter .container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-size: 80px;
+    color: #f2a340;
+    font-weight: bold;
+    text-align: center;
+}
+
+.title.black {
+    color: rgb(43, 40, 40);
+}
+
+.button{
+    margin-top: 20px;
+}
+/*----------------- typewriter ------------*/
+
+#typewriter{
+    font-size: 50px;
+    color: #fff;
+    text-align: center;
+}
+
+#typing {
+	display: inline;
+}
+
+.blink {
+	display: inline;
+	-webkit-animation: blink .75s linear infinite;
+   -moz-animation: blink .75s linear infinite;
+   -ms-animation: blink .75s linear infinite;
+   -o-animation: blink .75s linear infinite;
+   animation: blink .75s linear infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 0; }
+}
+/*----------------- typewriter ------------*/
+/*----------------- home ------------------*/
+
+
+
+/* Dashboard */
+
+.dashboard-title-container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.dashboard-events-container th {
+    width: 25%;
+}
+
+.dashboard-events-container form {
+    display: inline-block;
+}
+
+.btn-info,
+.btn-info:hover {
+    color: #fff !important;
+}
+
+/* footer */
+
+footer {
+    bottom: 0;
+    text-align: center;
+    background-color: #353e48;
+    color: white;
+    padding: 10px;
+    position: absolute !important;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin-bottom: 0;
+}
