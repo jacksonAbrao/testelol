@@ -1,8 +1,10 @@
-Have PHP installed;
-Configure the ".env" file, as shown in the ".env.example" file;
-"composer install";
-"npm install" to download the necessary node dependencies;
-"npm run dev" to run these dependencies;
-"php artisan migrate" to create the tables in the database;
-"php artisan db:seed" to create the default data;
-"php artisan serve" to run the project;
+<h1>LOL Design<h1>
+You must have php installed;<br>
+configure the .env file, as shown in the .env.example file;<br>
+composer install;<br>
+npm install;<br>
+npm run dev;<br>
+road code php artisan migrate;<br>
+php artisan db:seed;<br>
+php artisan serve;<br>
+>>>>>>> eed9381e6b4ef58c07c791dfd15f8851a14a69fb
