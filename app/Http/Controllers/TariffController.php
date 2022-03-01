@@ -31,6 +31,22 @@ class TariffController extends Controller
         return redirect('/dashboard_tariffs')->with('msg', 'Tarifa cadastrada com sucesso!');
     }
 
+    public function edit($id)
+    {
+        $tariff = Tariff::findOrFail($id);
+
+        return view('admin.dashboard_tariffs', ['tariff' => $tariff]);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $data = $request->all();
+
+        Tariff::findOrFail($id)->update($data);
+
+        return redirect('/dashboard_tariffs')->with('msg', 'Tarifa atualizada com sucesso!');
+    }
+
     public function destroy($id)
     {
         Tariff::findOrFail($id)->delete();

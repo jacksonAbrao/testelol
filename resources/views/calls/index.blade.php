@@ -1,6 +1,6 @@
 @extends("layouts.main")
 
-@section("title", "Planos")
+@section("title", "Calculando Chamadas")
 
 @section("content")
 
@@ -54,8 +54,8 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <h1 id="complano">Você pagara  x  com o plano </h1>
-                                <h1 id="semplano">Você pagara  x  sem o plano </h1>
+                                <p id="complano">Você não colocou informações suficientes </p>
+                                <p id="semplano"></p>
                             </div>
                         </div>
                     </div>
@@ -91,27 +91,18 @@
 
             }else {
                 var total = 0
-            }
-            var texto = `Você pagara R$ ${total.toFixed(2)} com o plano ${plano.name}`;
-            $("#complano").html(texto);
-            var texto = `Você pagara R$ ${(total + tarifa).toFixed(2)} sem o plano ${plano.name}`;
-            $("#semplano").html(texto);
+            };
+                if(total == 0){
+                    $("#complano").html(`Sua ligação sairá de graça pelo plano ${plano.name}`);
+                }else {
+                    $("#complano").html(`Você pagara R$ ${total.toFixed(2)} com o plano ${plano.name}`);
+                }
+                var texto = `Você pagara R$ ${(minutos * tarifa).toFixed(2)} sem o plano ${plano.name}`;
+                $("#semplano").html(texto);
 
-        });
+            });
 
     });
 </script>
 
 @endsection
-
-<?php
-
-/*  if (isset($tarifa)) {
-  $jurus = $tarifa * 0.10;
-  $tarifaCorrigida = $tarifa + $jurus;
-  $valorPagarPlano = ($min - $plano) * $tarifaCorrigida;
-  $valorPagarSem = $min * $tarifa;
-
-  if ($min <= $plano) { echo "Sua ligação sairá de graça pelo plano fale mais $plano ou <br> Pagara R$" . number_format($valorPagarSem, 2, ',' , '.' ) . " sem o plano" ; } else { echo "você pagará R$ " . number_format($valorPagarPlano, 2, ',' , '.' ) . " com o plano Fale mais $plano ou <br> Pagara R$ " . number_format($valorPagarSem, 2, ',' , '.' ) . " sem o plano." ; } } else { echo "Não temos plano para essa ligação" ; }
-  */
-?>

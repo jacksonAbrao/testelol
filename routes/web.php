@@ -19,6 +19,8 @@ Route::delete('/dashboard_plans/{id}', [PlanController::class, 'destroy'])->midd
 Route::get('/dashboard_tariffs', [TariffController::class, 'create'])->middleware('auth');
 Route::post('/dashboard_tariffs', [TariffController::class, 'store'])->middleware('auth');
 Route::get('/dashboard_tariffs', [TariffController::class, 'tariff'])->middleware('auth');
+Route::get('/dashboard_tariffs/{id}', [TariffController::class, 'edit'])->middleware('auth');
+Route::put('/dashboard_tariffs/{id}', [TariffController::class, 'update'])->middleware('auth');
 Route::delete('/dashboard_tariffs/{id}', [TariffController::class, 'destroy'])->middleware('auth');
 
 // routes users
